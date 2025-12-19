@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Teal/Green -->
+    <color name="primary">#006B5B</color>
+    <color name="primary_dark">#004D40</color>
+    <color name="primary_light">#4DB6AC</color>
+    <color name="primary_container">#74F8DB</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#00201A</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#4A635D</color>
+    <color name="secondary_container">#CCE8E0</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_secondary_container">#06201B</color>
+    
+    <!-- Tertiary Colors -->
+    <color name="tertiary">#426278</color>
+    <color name="tertiary_container">#C7E7FF</color>
+    
+    <!-- Background & Surface -->
+    <color name="background">#FAFDFA</color>
+    <color name="surface">#FAFDFA</color>
+    <color name="surface_variant">#DBE5E0</color>
+    <color name="on_background">#191C1B</color>
+    <color name="on_surface">#191C1B</color>
+    <color name="on_surface_variant">#3F4946</color>
+    
+    <!-- Error Colors -->
+    <color name="error">#BA1A1A</color>
+    <color name="error_container">#FFDAD6</color>
+    <color name="on_error">#FFFFFF</color>
+    
+    <!-- Status Colors for Rooms -->
+    <color name="status_available">#4CAF50</color>
+    <color name="status_available_bg">#E8F5E9</color>
+    <color name="status_occupied">#2196F3</color>
+    <color name="status_occupied_bg">#E3F2FD</color>
+    <color name="status_maintenance">#FF9800</color>
+    <color name="status_maintenance_bg">#FFF3E0</color>
+    
+    <!-- Payment Status Colors -->
+    <color name="status_paid">#4CAF50</color>
+    <color name="status_paid_bg">#E8F5E9</color>
+    <color name="status_unpaid">#F44336</color>
+    <color name="status_unpaid_bg">#FFEBEE</color>
+    
+    <!-- Income/Expense Colors -->
+    <color name="income">#2E7D32</color>
+    <color name="income_bg">#E8F5E9</color>
+    <color name="expense">#C62828</color>
+    <color name="expense_bg">#FFEBEE</color>
+    <color name="warning">#FF9800</color>
+    <color name="warning_bg">#FFF3E0</color>
+    
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#9E9E9E</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="divider">#E0E0E0</color>
+    
+    <!-- Card & Elevation -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_stroke">#E0E0E0</color>
+    <color name="outline">#73796F</color>
+</resources>

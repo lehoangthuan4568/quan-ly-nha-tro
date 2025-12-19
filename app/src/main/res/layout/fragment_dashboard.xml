@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xin chào!"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard_title"
+                    android:textColor="@color/on_background"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_settings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/on_surface" />
+        </LinearLayout>
+
+        <!-- Stats Grid - Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- Tổng phòng -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_tong_phong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="@color/primary_container"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_tong_phong"
+                        android:textColor="@color/on_primary_container"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tong_phong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="0"
+                        android:textColor="@color/on_primary_container"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="phòng"
+                        android:textColor="@color/on_primary_container"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Phòng trống -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_phong_trong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardBackgroundColor="@color/status_available_bg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_phong_trong"
+                        android:textColor="@color/status_available"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_phong_trong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="0"
+                        android:textColor="@color/status_available"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="phòng"
+                        android:textColor="@color/status_available"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Stats Grid - Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- Đang thuê -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_dang_thue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="@color/status_occupied_bg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_phong_thue"
+                        android:textColor="@color/status_occupied"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_dang_thue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="0"
+                        android:textColor="@color/status_occupied"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="phòng"
+                        android:textColor="@color/status_occupied"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hóa đơn chưa thu -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_chua_thu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardBackgroundColor="@color/status_unpaid_bg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_hoa_don_chua_thu"
+                        android:textColor="@color/status_unpaid"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_hoa_don_chua_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="0"
+                        android:textColor="@color/status_unpaid"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hóa đơn"
+                        android:textColor="@color/status_unpaid"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Doanh thu tháng Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_doanh_thu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard_doanh_thu_thang"
+                    android:textColor="@color/on_primary"
+                    android:textSize="14sp"
+                    android:alpha="0.8" />
+
+                <TextView
+                    android:id="@+id/tv_doanh_thu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="0 đ"
+                    android:textColor="@color/on_primary"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_thang_hien_tai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Tháng 12/2024"
+                    android:textColor="@color/on_primary"
+                    android:textSize="12sp"
+                    android:alpha="0.7" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Quick Actions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thao tác nhanh"
+            android:textColor="@color/on_background"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Thêm phòng -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_them_phong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_room"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Thêm phòng"
+                        android:textColor="@color/on_surface"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Thêm khách -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_them_khach"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_people"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Thêm khách"
+                        android:textColor="@color/on_surface"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tạo hóa đơn -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_tao_hoa_don"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_receipt"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Tạo hóa đơn"
+                        android:textColor="@color/on_surface"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

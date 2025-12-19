@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Avatar -->
+        <FrameLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_circle_primary">
+
+            <TextView
+                android:id="@+id/tv_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="NT"
+                android:textColor="@color/on_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!-- Tenant Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ho_ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nguyễn Văn A"
+                android:textColor="@color/on_surface"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_phong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Phòng 01"
+                android:textColor="@color/primary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_phone"
+                    app:tint="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tv_sdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="0901234567"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Status Badge -->
+        <TextView
+            android:id="@+id/tv_trang_thai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/bg_badge_status"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="Đang thuê"
+            android:textColor="@color/status_occupied"
+            android:textSize="11sp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

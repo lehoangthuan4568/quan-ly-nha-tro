@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840572433992",
+    "project_id": "quanlynhatro-89c0b",
+    "storage_bucket": "quanlynhatro-89c0b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840572433992:android:7233396cca5a6b773fca7d",
+        "android_client_info": {
+          "package_name": "com.example.quan_ly_tro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkWvWRW0Zewv2lRK0Sgv54HVvxF9I1OgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
