@@ -1,10 +1,6 @@
 # 📱 Ứng dụng Quản lý Nhà trọ - Android
 
 <p align="center">
-  <img src="screenshots/app_icon.png" alt="Logo" width="120" height="120">
-</p>
-
-<p align="center">
   <strong>Ứng dụng Android hỗ trợ quản lý nhà trọ hiệu quả</strong>
 </p>
 
@@ -149,13 +145,13 @@ Run → Run 'app' (hoặc Shift + F10)
 <p align="center">
   <img src="screenshots/dashboard.png" width="200" alt="Dashboard">
   <img src="screenshots/phong_list.png" width="200" alt="Danh sách phòng">
-  <img src="screenshots/tao_hoadon.png" width="200" alt="Tạo hóa đơn">
-  <img src="screenshots/thuchi.png" width="200" alt="Thu chi">
+  <img src="screenshots/Hoa_Don.png" width="200" alt="Hóa đơn">
+  <img src="screenshots/Thu_Chi.png" width="200" alt="Thu chi">
 </p>
 
-| Dashboard | Quản lý Phòng | Tạo Hóa đơn | Thu Chi |
-|:---------:|:-------------:|:-----------:|:-------:|
-| Tổng quan thống kê | Danh sách phòng | Form tạo hóa đơn | Lịch sử giao dịch |
+| Dashboard | Quản lý Phòng | Hóa đơn | Thu Chi |
+|:---------:|:-------------:|:-------:|:-------:|
+| Tổng quan thống kê | Danh sách phòng | Quản lý hóa đơn | Lịch sử giao dịch |
 
 ---
 
