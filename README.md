@@ -197,8 +197,8 @@ Run → Run 'app' (hoặc Shift + F10)
 Dự án này được phát triển cho mục đích học tập.
 
 ```
-Copyright © 2024 [TÊN CỦA BẠN]
-Đồ án môn học: Lập trình trên Thiết bị Di động
+Copyright © 2025 [Lê Hoàng Thuận]
+Đồ án môn học: Lập trình trên Thiết bị Di động.
 ```
 
 ---
